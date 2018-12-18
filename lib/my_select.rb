@@ -1,20 +1,35 @@
 def my_select(collection)
  
   if collection.count == 0
+    
   	return nil
+  	
   else
+    
  		counter = 0
- 		tmp_array = []
+ 		
+ 		inner_array = [ ]
+ 		
  		while counter < collection.count
+ 		
  			if collection[counter] % 2 == 0
+ 			  
  				yield collection[counter]
- 				tmp_array << collection[counter]
+ 				
+ 				inner_array << collection[counter]
+ 				
  				counter += 1
- 			else
+ 		
+ 		else
+ 			
  				puts collection[counter]
+ 				
  				counter += 1
  			end
+ 		
  		end
- 		return tmp_array
+ 		
+ 		return inner_array
+  	
   	end
  end	
